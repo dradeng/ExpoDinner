@@ -12,7 +12,7 @@ Run: 'expo start --android' for Android
 
 
 # Points so far
-Total: 80
+Total: 100
 
 4.1.1 (10)
 
@@ -25,3 +25,5 @@ Total: 80
 4.5 (10)
 
 4.7.1 (20)
+
+4.7.2 (20)
