@@ -7,8 +7,8 @@ Clone the repo
 
 Run: npm install
 
-Run: 'react-native run-ios' for IOS
-Run: 'react-native run-android' for Android
+Run: 'expo start --ios' for IOS
+Run: 'expo start --android' for Android
 
 
 # Points so far
