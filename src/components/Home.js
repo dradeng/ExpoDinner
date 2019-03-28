@@ -12,7 +12,7 @@ class Home extends Component {
       <Card>
         <CardSection>
           <Button onPress={() => firebase.auth().signOut().then(() => Actions.login())}>
-            Log Out
+            Log Out Pls
           </Button>
         </CardSection>
       </Card>

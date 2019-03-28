@@ -15,6 +15,18 @@ class Login extends Component {
       error: '', loading: false
     };
   }
+  componentDidMount() {
+    var user = firebase.auth().currentUser;
+
+      if (user) {
+        console.log('user exits');
+        Actions.home();
+      } else {
+        console.log('user does not exits');
+        
+        // No user is signed in.
+      }
+  }
   async loginWithFacebook() {
 
     //ENTER YOUR APP ID
