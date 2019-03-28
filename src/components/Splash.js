@@ -3,6 +3,7 @@ import { Text, View, Image, TouchableHighlight, Dimensions, StyleSheet, Animated
 import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 import { Button, Card, CardSection, Input, Spinner } from './common';
+import translate from '../../utils/language.utils';
 
 class Splash extends Component {
   constructor(props) {
@@ -27,6 +28,18 @@ class Splash extends Component {
     };
   }
   componentDidMount() {
+
+    var user = firebase.auth().currentUser;
+
+    if (user) {
+        
+      Actions.home();
+    } else {
+   
+      
+      // No user is signed in.
+    }
+
     this.animate();
 
 
@@ -240,7 +253,7 @@ class Splash extends Component {
           onPress={this.highlight.bind(this)}
           underlayColor={'rgb(100,184,248)'}
           style={{backgroundColor: 'rgb(15,140,255)',position: 'absolute', bottom:0, width: '100%' }}>
-          <Text style={{fontSize: 24, textAlign: 'center', color: 'white'}}>Get Started</Text>
+          <Text style={{fontSize: 24, textAlign: 'center', color: 'white'}}>{translate('GET_STARTED')}</Text>
         </TouchableHighlight>
 
       </View>

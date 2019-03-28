@@ -7,6 +7,7 @@ import Router from './src/Router';
 class App extends Component {
   state = { loggedIn: null };
 
+
   componentWillMount() {
     firebase.initializeApp({
       apiKey: "AIzaSyBYPgdtmFXywT4hrQ1sz05EC6h4BgtdwQ8",
@@ -30,9 +31,7 @@ class App extends Component {
     switch (this.state.loggedIn) {
       case true:
         return (
-          <Button onPress={() => firebase.auth().signOut()}>
-            Log Out
-          </Button>
+          <Router />
         );
       case false:
         return (
