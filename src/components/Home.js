@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 import { Button, Card, CardSection, Input, Spinner } from './common';
+import InvitationCard from './InvitationCard';
 
 class Home extends Component {
   state = { email: '', password: '', error: '', loading: false };
@@ -10,6 +11,9 @@ class Home extends Component {
   render() {
     return (
       <Card>
+        <CardSection>
+          <InvitationCard />
+        </CardSection>
         <CardSection>
           <Button onPress={() => firebase.auth().signOut().then(() => Actions.login())}>
             Log Out Pls
