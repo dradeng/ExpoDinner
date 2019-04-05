@@ -15,8 +15,8 @@ Run: 'expo start --android' for Android
 # Points so far
 Total: 145
 
-Group: 125   
-Draden's Individual: 20 
+Group: 145   
+Draden's Individual: 0 
 Tony's Individual: 0 
 
 4.1 (20)
