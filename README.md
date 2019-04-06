@@ -13,32 +13,32 @@ Run: 'expo start --android' for Android
 
 
 # Points so far
-Total: 145
+Total: 240
 
-Group: 125   
-Draden's Individual: 20 
-Tony's Individual: 0 
+Group: 145 / 175 
+Draden's Individual: 95 / 200 
+Tony's Individual: 0 / 200
 
-4.1 (20)
+4.1 (20) CHECKED OFF
   - 4.1.1 (10)
   - 4.1.2 (10)
 
-4.2 (5)
+4.2 (5) CHECKED OFF
   - 4.2.1 (5)
 
-4.3 (25)
+4.3 (25) CHECKED OFF
   - 4.3.1 (25)
   
-4.4 (15)
+4.4 (15) CHECKED OFF
   - 4.4.1 (15)
   
-4.5 (10)
+4.5 (10) CHECKED OFF
   - 4.5.1 (10)
 
-4.6 (10)
+4.6 (10) CHECKED OFF
   - 4.6.1 (10)
 
-4.7 (40)
+4.7 (40) CHECKED OFF
   - 4.7.1 (20)
   - 4.7.2 (20)
 
@@ -48,4 +48,12 @@ Tony's Individual: 0
   - 5.1.2 (5)
   - 5.1.3 (5)
   - 5.1.4 (5)
+  
+7.1 (40)
+  - 7.1.1 (10)
+  - 7.1.2 (30)
+
+7.2 (55)
+  - 7.2.1 (25)
+  - 7.2.2 (30)
   
