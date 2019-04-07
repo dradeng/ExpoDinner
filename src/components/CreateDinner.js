@@ -7,7 +7,8 @@ import { TimePicker, DatePicker } from 'react-native-wheel-picker-android';
 import Geocoder from 'react-native-geocoding';
 import { Button, Card, CardSection, Spinner } from './common';
 import { Input } from 'react-native-elements';
-import { Constants, Location, Permissions,MapView } from 'expo';
+import Map from './Map';
+import { Constants, Location, Permissions } from 'expo';
 
 class CreateDinner extends Component {
   constructor(props) {
@@ -32,16 +33,17 @@ class CreateDinner extends Component {
       },
     );
   }
-  handleSubmit() {
-    fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + this.state.address + '&key=' + 'AIzaSyBl9N_4Qo5m-IElGXKpz62Ah42YaUSSU2g')
+  handleSubmit(location) {
+    console.log('this.state.location $$%$%$%$%$%$')
+    console.log(this.state.location)
+    fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + this.state.location + '&key=' + 'AIzaSyBl9N_4Qo5m-IElGXKpz62Ah42YaUSSU2g')
       .then((response) => response.json())
       .then((responseJson) => {
        
         var addy = JSON.stringify(responseJson.results[0].geometry.location);
-        console.log(addy)
-        console.log(this.state.latitude)
+        
+        
         console.log(responseJson.results[0].geometry.location.lat)
-        console.log(this.state.longitude)
         console.log(responseJson.results[0].geometry.location.lng)
         this.setState({
           latitude: responseJson.results[0].geometry.location.lat,
@@ -84,7 +86,8 @@ class CreateDinner extends Component {
               <View style={{width: '80%'}}>
               
                 <Input
-                  onChange={this.handleSubmit.bind(this)}
+                  onChange={(location) => this.setState({location: location.nativeEvent.text})}
+                  onSubmitEditing={this.handleSubmit.bind(this)}
                   leftIcon={<Icon onPress={this.change.bind(this)} type='font-awesome' color='rgb(15,140,255)' name='map-marker' style={{margin: 30}}/>}
                   placeholder='  Enter Address'
                   value={this.state.location}
@@ -92,15 +95,7 @@ class CreateDinner extends Component {
     
               </View>
             </View>   
-              <MapView
-                style={{height: '60%', width: '100%', paddingTop: 10}}
-                initialRegion={{
-                  latitude: this.state.latitude,
-                  longitude: this.state.longitude,
-                  latitudeDelta: 0.0722,
-                  longitudeDelta: 0.0321,
-                }}
-              />
+             <Map />
           </View>
         </View>
       </View>
