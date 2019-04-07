@@ -95,7 +95,10 @@ class CreateDinner extends Component {
     
               </View>
             </View>   
-             <Map />
+             <Map 
+              latitude={this.state.latitude}
+              longitude={this.state.longitude}
+             />
           </View>
         </View>
       </View>
