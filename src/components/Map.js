@@ -7,27 +7,26 @@ class Map extends Component {
 	    super(props);
 
 	    this.state = {
-	      latitude: this.props.latitude,
-	      longitude: this.props.longitude,
-	      address: null,
-	      location: null,
-	      error: null,
+		     	latitude: this.props.latitude,
+	      		longitude: this.props.longitude,
+		    	latitudeDelta: 0.0922,
+		     	longitudeDelta: 0.0421,
+		     	region: null,
 	    };
   	}
   	componentWillReceiveProps(nextProps) {
         console.log('componentWillReceiveProps', nextProps);
         this.setState({latitude: nextProps.latitude});
         this.setState({longitude: nextProps.longitude});
-        this.forceUpdate();
 
     }
-    
     render() {
     	
 	    return (
 	    	<MapView
 	            style={{height: '60%', width: '100%', paddingTop: 10}}
-	            initialRegion={{
+	           
+	            region={{
 	              latitude: this.state.latitude,
 	              longitude: this.state.longitude,
 	              latitudeDelta: 0.0722,
