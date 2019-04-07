@@ -24,7 +24,7 @@ class Map extends Component {
     	
 	    return (
 	    	<MapView
-	            style={{height: '60%', width: '100%', paddingTop: 10}}
+	            style={{height: '55%', width: '100%', paddingTop: 10}}
 	           
 	            region={{
 	              latitude: this.state.latitude,

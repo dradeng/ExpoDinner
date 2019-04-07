@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, TouchableHighlight } from 'react-native';
 import firebase from 'firebase';
 import { Icon } from 'react-native-elements';
 import { Actions } from 'react-native-router-flux';
@@ -32,6 +32,9 @@ class CreateDinner extends Component {
         });
       },
     );
+  }
+  highlight() {
+    Actions.invite();
   }
   handleSubmit(location) {
     console.log('this.state.location $$%$%$%$%$%$')
@@ -99,6 +102,12 @@ class CreateDinner extends Component {
               latitude={this.state.latitude}
               longitude={this.state.longitude}
              />
+             <TouchableHighlight
+              onPress={this.highlight.bind(this)}
+              underlayColor={'rgb(100,184,248)'}
+              style={{backgroundColor: 'rgb(15,140,255)',position: 'absolute', bottom:0, width: '100%' }}>
+              <Text style={{fontSize: 24, textAlign: 'center', color: 'white'}}>Invite People</Text>
+            </TouchableHighlight>
           </View>
         </View>
       </View>

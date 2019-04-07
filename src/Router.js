@@ -5,6 +5,7 @@ import SignUp from './components/SignUp';
 import Home from './components/Home';
 import Splash from './components/Splash';
 import CreateDinner from './components/CreateDinner';
+import Invite from './components/Invite';
 
 const RouterComponent = () => {
   return (
@@ -15,6 +16,7 @@ const RouterComponent = () => {
         <Scene key="splash" component={Splash} title="Splash" initial/>
         <Scene key="home" component={Home} title="Home" />
         <Scene key="createDinner" component={CreateDinner} title="Add Event" />
+        <Scene key="invite" component={Invite} title="Invite" />
       </Scene>
     </Router>
   );

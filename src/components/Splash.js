@@ -41,8 +41,6 @@ class Splash extends Component {
     }
 
     this.animate();
-
-
     Animated.loop(
       Animated.stagger(600, [
         Animated.sequence([
@@ -161,7 +159,7 @@ class Splash extends Component {
         }
       ),
     ]).start(() => this.animate())
-}
+  }
   highlight() {
     Actions.login();
   }
