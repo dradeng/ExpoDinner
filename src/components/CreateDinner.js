@@ -18,7 +18,8 @@ class CreateDinner extends Component {
       latitude: 38.03817,
       longitude: -78.489014,
       address: null,
-      location: null,
+      selectedItem: null,
+      location: "320 14th St NW",
       error: null,
     };
   }
@@ -33,12 +34,16 @@ class CreateDinner extends Component {
       },
     );
   }
+  onItemSelected = selectedItem => {
+    console.log('SELECTING');
+    var s = selectedItem.toLocaleTimeString();
+    this.setState({ selectedItem: s });
+  }
   highlight() {
-    Actions.invite();
+    this.props.navigation.navigate('invite', {time: this.state.selectedItem, location: this.state.location});
+
   }
   handleSubmit(location) {
-    console.log('this.state.location $$%$%$%$%$%$')
-    console.log(this.state.location)
     fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + this.state.location + '&key=' + 'AIzaSyBl9N_4Qo5m-IElGXKpz62Ah42YaUSSU2g')
       .then((response) => response.json())
       .then((responseJson) => {
@@ -80,7 +85,10 @@ class CreateDinner extends Component {
         <View style={{justifyContent: 'flex-start', flexDirection: 'row', position: 'relative'}}>
           <View style={{flex: 1, justifyContent: 'center'}}>
             <Text style={{color: 'grey', textAlign: 'center'}}>What time is dinner</Text>
-            <TimePicker/>
+            <TimePicker
+              selectedItem={this.state.selectedItem}
+              onTimeSelected={this.onItemSelected}
+            />
             <Text style={{color: 'grey', width: '100%', textAlign: 'center', paddingTop: 50}}>
               Choose a location
               

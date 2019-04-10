@@ -20,8 +20,8 @@ class Invite extends Component {
   }
   render() {
     var count = 0;
-    console.log(count)
-    console.log(this.state.selected1)
+    console.log(this.props.navigation.state.params.location)
+    console.log(this.props.navigation.state.params.time)
     if(this.state.selected1) {
       count = count + 1;
     }
@@ -38,8 +38,8 @@ class Invite extends Component {
             style={{width: 25, height: 25}}
             source={require('../assets/coffee.png')}
           />
-          <Text style={{color: 'black', width: '100%', textAlign: 'center', fontSize: 18}}> 320 14th St NW</Text>
-          <Text style={{color: 'grey', width: '100%', textAlign: 'center'}}> Thurs 11 April - 9:00pm</Text>
+          <Text style={{color: 'black', width: '100%', textAlign: 'center', fontSize: 18}}>{this.props.navigation.state.params.location}</Text>
+          <Text style={{color: 'grey', width: '100%', textAlign: 'center'}}> Thurs 11 April - {this.props.navigation.state.params.time}</Text>
         </View>
         <View style={{width: '100%', flexDirection: 'row', paddingTop: 20}}>
           <Text style={{color: 'grey', textAlign: 'left', width: '50%'}}>Who do you want to invite?</Text>
