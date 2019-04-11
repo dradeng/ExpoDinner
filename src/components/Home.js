@@ -20,6 +20,11 @@ class Home extends Component {
           </Button>
         </CardSection>
         <CardSection>
+          <Button onPress={() => Actions.eventDetails()}>
+            DinnerEvent
+          </Button>
+        </CardSection>
+        <CardSection>
           <Button onPress={() => firebase.auth().signOut().then(() => Actions.login())}>
             Log Out Pls
           </Button>
