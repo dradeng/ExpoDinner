@@ -29,8 +29,12 @@ class EventDetailContact extends Component {
             <Text style={{color: 'grey'}}>458-984-0797</Text>
           </View>
 
-          <View style={{flex: 1, position: "absolute", right: 0, alignSelf: 'flex-end', justifyContent: 'center', alignItems: 'right'}}>
-            
+          <View style={{flex: 1, position: "absolute", right: 5, bottom: 15, alignSelf: 'flex-end', justifyContent: 'center', alignItems: 'right', textAlignVertical: 'center'}}>
+            {this.props.accepted ? (
+              <Icon name='check' color='rgba(106, 207, 103, .9)' />
+            ) : (
+              <Text style={{color: 'rgba(236, 83, 76, .9)', fontSize: 20, margin: 5, textAlignVertical: 'center' }}>X</Text>
+            )}
           </View>
         </View>
       </View>

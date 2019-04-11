@@ -35,10 +35,14 @@ class EventDetails extends Component {
         <View style={{flexDirection: 'column'}}>
           
           <TouchableOpacity> 
-            <EventDetailContact />
+            <EventDetailContact 
+              accepted={true}
+            />
           </TouchableOpacity>
           <TouchableOpacity> 
-            <EventDetailContact />
+            <EventDetailContact
+              accepted={true}
+            />
           </TouchableOpacity>
           
         </View>
@@ -48,10 +52,14 @@ class EventDetails extends Component {
         <View style={{flexDirection: 'column'}}>
           
           <TouchableOpacity> 
-            <EventDetailContact />
+            <EventDetailContact 
+              accepted={false}
+            />
           </TouchableOpacity>
           <TouchableOpacity> 
-            <EventDetailContact />
+            <EventDetailContact 
+              accepted={false}
+            />
           </TouchableOpacity>
           
         </View>
