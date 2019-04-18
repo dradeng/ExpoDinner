@@ -2,7 +2,7 @@ import {MapView} from 'expo';
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
-class Map extends Component {
+class MapViewInvite extends Component {
 	constructor(props) {
 	    super(props);
 
@@ -21,7 +21,14 @@ class Map extends Component {
 
     }
     render() {
-    	
+
+          var currentLocation = [
+              {
+                  latitude: 38.028537,
+                  longitutde: -78.514695,
+                  title: 'Your current location',
+              }
+          ]
 	    return (
 	    	<MapView
 	            style={{height: '80%', width: '100%', paddingTop: 10}}
@@ -31,10 +38,17 @@ class Map extends Component {
 	              longitude: this.state.longitude,
 	              latitudeDelta: 0.0722,
 	              longitudeDelta: 0.0321,
-	            }}
-	        /> 
+                }}>
+
+                <MapView.Marker
+                    coordinate ={{latitude: 38.031953,
+                        longitude: -78.510857}}
+                    title={"Destination: Rice Hall"}
+                    description={"85 Engineer's Way"}
+                />
+            </MapView>
 	    );
 	}
 }
 
-export default Map;
+export default MapViewInvite;
