@@ -7,6 +7,7 @@ import Splash from './components/Splash';
 import CreateDinner from './components/CreateDinner';
 import Invite from './components/Invite';
 import EventDetails from './components/EventDetails';
+import ViewDinner from './components/ViewDinner';
 
 
 const RouterComponent = () => {
@@ -20,6 +21,7 @@ const RouterComponent = () => {
         <Scene key="createDinner" component={CreateDinner} title="Add Event" />
         <Scene key="invite" component={Invite} title="Invite" />
         <Scene key="eventDetails" component={EventDetails} title="Event Details" />
+        <Scene key="viewDinner" component={ViewDinner} title = "Invitation Details" />
       </Scene>
     </Router>
   );
