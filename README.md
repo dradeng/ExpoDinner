@@ -17,7 +17,7 @@ Total: 380
 
 Group: 175 / 175 YEET 
 Draden's Individual: 205 / 200 YEET
-Tony's Individual: 65 / 200
+Tony's Individual: 85 / 200
 
 4.1 (20) CHECKED OFF
   - 4.1.1 (10)
@@ -55,11 +55,12 @@ Tony's Individual: 65 / 200
 6.1 (20)
   - 6.1.1 (20) (T)
 
-6.4 (30)
+6.4 (50)
+  - 6.4.1 (20) (T)
   - 6.4.2 (10) (T)
   - 6.4.3 (10) (T)
   - 6.4.4 (10) (T)
-  
+
 7.1 (40)
   - 7.1.1 (10)
   - 7.1.2 (30)

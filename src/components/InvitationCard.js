@@ -22,8 +22,9 @@ class Home extends Component {
           <View style={{float: 'right', width: '75%', margin: 5}}>
             <View>
               <Button onPress={() => Actions.viewDinner()}>
-                <Text style={{fontWeight: 'bold'}}>Alma Evans{"\n"}</Text>
-                <Text style={{color: 'grey'}}>Sunday June 17 - 8:00 pm</Text>
+                <Text style={{color: 'black'}}>Alma Evans{"\n"}</Text>
+                <Text style={{color: 'grey'}}>Sunday June 17 - 8:00 pm{"\n"}</Text>
+                <Text style={{color: 'black'}}>Status: Pending -- Let Alma know if you can make it!</Text>
               </Button>
             </View>
           </View>

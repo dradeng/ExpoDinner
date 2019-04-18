@@ -25,6 +25,9 @@ class Home extends Component {
             <View>
               <Text style={{color: 'grey'}}>Sunday June 17 - 8:00 pm</Text>
             </View>
+            <View>
+                <Text>Status: Pending -- Let Alma know if you can make it!</Text>
+            </View>
           </View>
         </View>
         <View style={{flexDirection:"row"}}>
