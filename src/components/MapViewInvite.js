@@ -4,16 +4,18 @@ import { Text, View } from 'react-native';
 
 class MapViewInvite extends Component {
 	constructor(props) {
-	    super(props);
+        super(props);
+        
+        this.state = {
+            latitude: this.props.latitude,
+            longitude: this.props.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+            region: null,
+        };
 
-	    this.state = {
-		     	latitude: this.props.latitude,
-	      		longitude: this.props.longitude,
-		    	latitudeDelta: 0.0922,
-		     	longitudeDelta: 0.0421,
-		     	region: null,
-	    };
-  	}
+    }
+      
   	componentWillReceiveProps(nextProps) {
         console.log('componentWillReceiveProps', nextProps);
         this.setState({latitude: nextProps.latitude});
@@ -21,15 +23,8 @@ class MapViewInvite extends Component {
 
     }
     render() {
-
-          var currentLocation = [
-              {
-                  latitude: 38.028537,
-                  longitutde: -78.514695,
-                  title: 'Your current location',
-              }
-          ]
 	    return (
+            
 	    	<MapView
 	            style={{height: '80%', width: '100%', paddingTop: 10}}
 	           
@@ -38,7 +33,11 @@ class MapViewInvite extends Component {
 	              longitude: this.state.longitude,
 	              latitudeDelta: 0.0722,
 	              longitudeDelta: 0.0321,
-                }}>
+                }}
+                
+                showsUserLocation={true}>
+
+                
 
                 <MapView.Marker
                     coordinate ={{latitude: 38.031953,
@@ -46,6 +45,11 @@ class MapViewInvite extends Component {
                     title={"Destination: Rice Hall"}
                     description={"85 Engineer's Way"}
                 />
+                {/*<MapView.Marker
+                    coordinate = {{latitude: this.latitude,
+                        longitude: this.longitude}}
+                    title={"Your current location"}
+                    />*/}
             </MapView>
 	    );
 	}
