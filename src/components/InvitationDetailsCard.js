@@ -26,7 +26,7 @@ class Home extends Component {
               <Text style={{color: 'grey'}}>Sunday June 17 - 8:00 pm</Text>
             </View>
             <View>
-                <Text>Status: Pending -- Let Alma know if you can make it!</Text>
+                <Text>Status: Pending</Text>
             </View>
           </View>
         </View>
