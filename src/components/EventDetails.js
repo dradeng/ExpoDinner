@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, Image, TouchableWithoutFeedback, TouchableOpacity, TouchableHighlight } from 'react-native';
 import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
-import CircleCheckBox from 'react-native-circle-checkbox'; 
+//import CircleCheckBox from 'react-native-circle-checkbox'; 
 import { CheckBox } from 'react-native-elements';
 import { Button, Card, CardSection, Input, Spinner } from './common';
 import InvitationCard from './InvitationCard';

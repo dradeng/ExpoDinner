@@ -11,7 +11,6 @@ class Home extends Component {
   render() {
     return (
       <View style={{width:'100%', minHeight: 50}}>
-        <Text>Pending(# of pending)</Text>
         <View style={{flexDirection: 'row'}}>
           <View style={{float: 'left', width: '25%'}}>
             <Image
@@ -21,11 +20,13 @@ class Home extends Component {
           </View>
           <View style={{float: 'right', width: '75%', margin: 5}}>
             <View>
-              <Button onPress={() => Actions.viewDinner()}>
-                <Text style={{color: 'black'}}>Alma Evans{"\n"}</Text>
-                <Text style={{color: 'grey'}}>Sunday June 17 - 8:00 pm{"\n"}</Text>
-                <Text style={{color: 'black'}}>Status: Pending</Text>
-              </Button>
+              <Text style={{fontWeight: 'bold'}}>Alma Evans</Text>
+            </View>
+            <View>
+              <Text style={{color: 'grey'}}>Sunday June 17 - 8:00 pm</Text>
+            </View>
+            <View>
+                <Text>Status: Pending</Text>
             </View>
           </View>
         </View>

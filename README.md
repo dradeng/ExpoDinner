@@ -15,9 +15,9 @@ Run: 'expo start --android' for Android
 # Points so far
 Total: 380
 
-Group: 175 / 175 YEET 
+Group: 190 / 175 YEET 
 Draden's Individual: 205 / 200 YEET
-Tony's Individual: 0 / 200
+Tony's Individual: 125 / 200
 
 4.1 (20) CHECKED OFF
   - 4.1.1 (10)
@@ -49,6 +49,24 @@ Tony's Individual: 0 / 200
   - 5.1.3 (5)
   - 5.1.4 (5)
   
+5.5 (15)
+  - 5.5.2 (15)
+
+6.1 (20)
+  - 6.1.1 (20) (T)
+
+6.2 (25)
+  - 6.2.1 (25) (T)
+
+6.3
+  - 6.3.1 (30) (T)
+
+6.4 (50)
+  - 6.4.1 (20) (T)
+  - 6.4.2 (10) (T)
+  - 6.4.3 (10) (T)
+  - 6.4.4 (10) (T)
+
 7.1 (40)
   - 7.1.1 (10)
   - 7.1.2 (30)
@@ -74,4 +92,8 @@ Tony's Individual: 0 / 200
   - 8.1.1 (15)
   - 8.1.2 (15)
 
-  
+# Code Citation
+  In order to access and display the current date: https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
+
+  For placing markers on the Invitation Details map: https://stackoverflow.com/questions/29412753/how-do-i-set-a-marker-in-mapview-of-react-native/39486745
+

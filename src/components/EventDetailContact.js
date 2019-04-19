@@ -3,7 +3,7 @@ import { Text, View, Image, TouchableWithoutFeedback } from 'react-native';
 import firebase from 'firebase';
 import { Icon } from 'react-native-elements';
 import { Actions } from 'react-native-router-flux';
-import CircleCheckBox from 'react-native-circle-checkbox'; 
+//import CircleCheckBox from 'react-native-circle-checkbox'; 
 import { CheckBox } from 'react-native-elements';
 import { Button, Card, CardSection, Input, Spinner } from './common';
 import InvitationCard from './InvitationCard';
@@ -29,7 +29,7 @@ class EventDetailContact extends Component {
             <Text style={{color: 'grey'}}>458-984-0797</Text>
           </View>
 
-          <View style={{flex: 1, position: "absolute", right: 5, bottom: 15, alignSelf: 'flex-end', justifyContent: 'center', alignItems: 'right', textAlignVertical: 'center'}}>
+          <View style={{flex: 1, position: "absolute", right: 5, bottom: 15, alignSelf: 'flex-end', justifyContent: 'center', alignItems: 'flex-end', textAlignVertical: 'center'}}>
             {this.props.accepted ? (
               <Icon name='check' color='rgba(106, 207, 103, .9)' />
             ) : (

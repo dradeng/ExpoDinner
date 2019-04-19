@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TouchableHighlight } from 'react-native';
+import { Text, View, Image, TouchableHighlight, ScrollView } from 'react-native';
 import firebase from 'firebase';
 import { Icon } from 'react-native-elements';
 import { Actions } from 'react-native-router-flux';
@@ -106,11 +106,11 @@ class CreateDinner extends Component {
     
               </View>
             </View>   
-             <Map 
+            <Map 
               latitude={this.state.latitude}
               longitude={this.state.longitude}
-             />
-             <TouchableHighlight
+            />
+            <TouchableHighlight
               onPress={this.highlight.bind(this)}
               underlayColor={'rgb(100,184,248)'}
               style={{backgroundColor: 'rgb(15,140,255)',position: 'absolute', bottom:0, width: '100%' }}>
@@ -119,8 +119,6 @@ class CreateDinner extends Component {
           </View>
         </View>
       </View>
-
-      
     );
   }
 }
